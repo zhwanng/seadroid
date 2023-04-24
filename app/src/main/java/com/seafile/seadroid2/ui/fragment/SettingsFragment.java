@@ -523,8 +523,6 @@ public class SettingsFragment extends CustomPreferenceFragment {
         refreshCameraUploadView();
 //        refreshContactsView();
 
-        PreferenceCategory cAboutCategory = (PreferenceCategory) findPreference(SettingsManager.SETTINGS_ABOUT_CATEGORY_KEY);
-
         // App Version
         try {
             appVersion = mActivity.getPackageManager().getPackageInfo(mActivity.getPackageName(), 0).versionName;
@@ -547,12 +545,13 @@ public class SettingsFragment extends CustomPreferenceFragment {
             }
         });
 
+        PreferenceCategory cAboutCategory = (PreferenceCategory) findPreference(SettingsManager.SETTINGS_ABOUT_CATEGORY_KEY);
+        String country = Locale.getDefault().getCountry();
         String language = Locale.getDefault().getLanguage();
-        if (TextUtils.equals("zh", language)) {
+        if (TextUtils.equals("CN", country) || TextUtils.equals("zh", language)) {
             findPreference(SettingsManager.SETTINGS_PRIVACY_POLICY_KEY).setOnPreferenceClickListener(new OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
-
                     Intent intent = new Intent(mActivity, PrivacyPolicyActivity.class);
                     mActivity.startActivity(intent);
                     return true;
