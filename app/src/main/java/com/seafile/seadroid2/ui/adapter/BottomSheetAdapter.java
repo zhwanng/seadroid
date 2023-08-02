@@ -11,7 +11,6 @@ import com.joanzapata.iconify.fonts.MaterialCommunityIcons;
 import com.joanzapata.iconify.widget.IconTextView;
 import com.seafile.seadroid2.R;
 import com.seafile.seadroid2.data.EventDetailsFileItem;
-import com.seafile.seadroid2.data.EventDetailsTree;
 
 import java.util.List;
 
