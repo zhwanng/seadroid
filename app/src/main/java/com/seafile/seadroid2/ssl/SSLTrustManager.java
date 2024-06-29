@@ -29,7 +29,7 @@ import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
-
+@Deprecated
 public final class SSLTrustManager {
     public enum SslFailureReason {
         CERT_NOT_TRUSTED,
@@ -40,11 +40,9 @@ public final class SSLTrustManager {
 
     private X509TrustManager defaultTrustManager;
 
-    private Map<Account, SecureX509TrustManager> managers =
-            Maps.newHashMap();
+    private Map<Account, SecureX509TrustManager> managers = Maps.newHashMap();
 
-    private Map<Account, SSLSocketFactory> cachedFactories =
-            Maps.newHashMap();
+    private Map<Account, SSLSocketFactory> cachedFactories = Maps.newHashMap();
 
     private static SSLTrustManager instance;
 

@@ -7,11 +7,15 @@
     <string name="edit_account">Edit</string>
     <string name="delete_account">Delete</string>
     <string name="delete">Delete</string>
+    <string name="deleted">Deleted</string>
     <string name="delete_repo">Are you sure you want to delete this library?</string>
     <string name="delete_file">Are you sure you want to delete this file or folder?</string>
+    <string name="delete_records">Are you sure you want to delete records?</string>
+    <string name="delete_records_and_file">Are you sure you want to delete records and locally downloaded file?</string>
     <string name="delete_successful">Successfully deleted</string>
     <string name="delete_repo_title">Delete library</string>
     <string name="delete_file_f">Delete file</string>
+    <string name="delete_local_file_sametime">Delete local files at the same time</string>
     <string name="recover_library">Recover library</string>
     <string name="recover_file">Recover file</string>
     <string name="move_file">Move file</string>
@@ -69,6 +73,7 @@
     <string name="err_token_expired">Authentication expired, please login again</string>
     <string name="upload">Upload</string>
     <string name="uploaded">Uploaded</string>
+    <string name="re_upload">Upload again</string>
     <string name="updated">Updated</string>
     <string name="download_failed">Download failed</string>
     <string name="download_waiting">Download waiting</string>
@@ -149,6 +154,7 @@
     <string name="load_accounts_fail">Failed to load Seafile accounts</string>
     <string name="load_libraries_fail">Failed to load libraries</string>
     <string name="load_dir_fail">Failed to load contents of this folder</string>
+    <string name="not_supported">Not supported at this time</string>
     <string name="not_supported_share">This type of share is not supported</string>
     <string name="edit">Edit</string>
     <string name="create_draft">Create draft</string>
@@ -195,10 +201,12 @@
     <string name="no_download_tasks">No download tasks yet</string>
     <string name="seahub_url_hint">Note: Server address should contain the port. For example, www.example.com:8000</string>
     <string name="copy_link">Copy link</string>
+    <string name="share_link_no_permission">You do not have permission to perform this action.</string>
     <string name="share_file_link">Share a link to this file</string>
     <string name="share_dir_link">Share a link to this folder</string>
     <string name="share_input_password">input share password</string>
     <string name="generating_link">Generating link…</string>
+    <string name="generating_link_title">Generating link</string>
     <string name="link_ready_to_be_pasted">The link is ready to be pasted.</string>
     <string name="rename_repo">Rename library</string>
     <string name="rename_file">Rename file</string>
@@ -210,6 +218,7 @@
         <item>Accounts</item>
         <item>Backup Photos</item>
     </string-array>
+    <string name="navigate_to_directory">Navigate to directory</string>
     <string name="no_starred_file">No starred file yet</string>
     <string name="added_to_upload_tasks">Uploading started</string>
     <string name="added_photo_to_upload_tasks">Photo uploading started</string>
@@ -491,6 +500,7 @@
     <string name="notification_upload_started_title">Uploading files…</string>
     <string name="notification_download_started_title">Downloading files…</string>
     <string name="notification_upload_completed">Upload completed</string>
+    <string name="notification_upload_upload_in_progress">%1$d%% %2$s</string>
     <plurals name="notification_upload_info">
         <item quantity="one">Uploading %1$d file (%2$d%%)</item>
         <item quantity="other">Uploading %1$d files (%2$d%%)</item>
@@ -513,8 +523,11 @@
     <string name="navdrawer_description_a11y" translatable="false">Navigation Drawer used to switch between major
         features of the application</string>
     <!--permission-->
-    <string name="permission_read_exteral_storage_rationale">To process files, allow storage permission to access them.</string>
+    <string name="permission_manage_external_storage_rationale">To process files, allows management of all files on external storage</string>
+    <string name="permission_read_external_storage_rationale">To process files, allow storage permission to access them.</string>
     <string name="permission_read_contacts_storage_rationale">To process contacts, allow contacts permission to access them.</string>
+    <string name="permission_camera">To process media files, allow camera permission.</string>
+
     <string name="permission_not_granted">Permission was not granted</string>
     <string name="history_change_title">Modification Details</string>
     <string name="no_more_activities">No more activities</string>
@@ -558,6 +571,8 @@
     <string name="channel_name_error">Error Alerts</string>
     <string name="channel_name_upload">File Uploading Info</string>
     <string name="channel_name_download">File Downloading Info</string>
+    <string name="channel_name_album_backup">Album-backup Info</string>
+    <string name="channel_name_transfer">File Transferring Info</string>
 
     <string name="above_quota">Above Quota</string>
     <string name="camera_upload_state">Upload Info</string>
@@ -567,6 +582,7 @@
     <string name="is_scanning">Scanning</string>
     <string name="is_uploading">Uploading</string>
     <string name="network_unavailable">Network unavailable</string>
+    <string name="network_error">Network error</string>
 
     <string name="required_password">Password is required.</string>
     <string name="weak_password">Password is too weak.</string>
@@ -602,10 +618,31 @@
     <string name="UncaughtExceptionHandler_err">The application stopped running</string>
 
     <!--action-->
+    <string name="pause">Pause</string>
+    <string name="paused">Paused</string>
+    <string name="waiting">Waiting</string>
     <string name="add">Add</string>
     <string name="modify">Modify</string>
     <string name="update">Update</string>
     <string name="clear">Clear</string>
+    <string name="close">Close</string>
     <string name="clear_all">Clear all</string>
+    <string name="done">Done</string>
+    <string name="success">Success</string>
+    <string name="failed">Failed</string>
+    <string name="uploading">Uploading</string>
+    <string name="downloading">Downloading</string>
+    <string name="replace_all">Replace All</string>
+    <string name="replace">Replace</string>
+    <string name="replace_local_file">Replace local file</string>
+    <string name="replace_remote_file">Replace remote file</string>
+    <string name="do_not_replace">Do not replace</string>
+    <string name="keep_both">Keep Both</string>
+
+    <!-- share link -->
+    <string name="link_permission_set_permission">Set permission</string>
+    <string name="link_permission_preview_and_download">Preview and download</string>
+    <string name="link_permission_preview_only">Preview only</string>
+    <string name="link_permission_download_and_upload">Download and upload</string>
 
 </resources>

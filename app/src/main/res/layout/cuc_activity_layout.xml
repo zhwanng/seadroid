@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <android.support.v4.view.ViewPager
-            android:id="@+id/cuc_pager"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_above="@+id/cuc_indicator" />
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="16dp" />
 
-    <com.viewpagerindicator.LinePageIndicator
-            android:id="@+id/cuc_indicator"
-            android:padding="20dip"
-            android:layout_alignParentBottom="true"
-            app:strokeWidth="4dp"
-            app:lineWidth="30dp"
-            app:unselectedColor="@color/light_grey"
-            app:selectedColor="@color/fancy_orange"
-            android:layout_height="wrap_content"
-            android:layout_width="fill_parent"/>
+    <Button
+        android:id="@+id/confirm_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/long_btn_height"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="16dp"
+        android:text="@string/confirm"
+        android:textColor="@color/white"
+        android:textSize="@dimen/long_btn_txt_size"
+        android:visibility="gone" />
 
-</RelativeLayout>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="4dp"
+        android:background="@null"
+        app:tabBackground="@drawable/indicator_selector"
+        app:tabGravity="center"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorHeight="0dp" />
+</LinearLayout>
