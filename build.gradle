@@ -10,8 +10,9 @@ buildscript {
         mavenCentral()
         maven { url 'https://jitpack.io' }
         maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
-//        maven { url "https://maven.aliyun.com/repository/public" }  //do not use，because F-Droid.
+//        maven { url "https://maven.aliyun.com/repository/public" }  //do not use，because F-Droid do not supported.
     }
+
     dependencies {
         classpath 'com.android.tools.build:gradle:7.4.2'
 

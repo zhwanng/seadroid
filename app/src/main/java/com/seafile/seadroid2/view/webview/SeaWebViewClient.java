@@ -15,11 +15,13 @@ import com.seafile.seadroid2.framework.util.Token2SessionConverts;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.function.BiConsumer;
 
 public class SeaWebViewClient extends WebViewClient {
     @Override
     public boolean shouldOverrideUrlLoading(WebView wb, WebResourceRequest request) {
         String url = request.getUrl().toString();
+        SLogs.d("override url: " + url);
 
         //Open the System app
         if (url.startsWith("tel:") ||
@@ -82,7 +84,12 @@ public class SeaWebViewClient extends WebViewClient {
             if (account != null) {
                 map.put("Authorization", "Token " + account.token);
             }
-
+            map.forEach(new BiConsumer<String, String>() {
+                @Override
+                public void accept(String s, String s2) {
+                    SLogs.d(s + " = " + s2);
+                }
+            });
             wb.loadUrl(buildUrl(mOriginTargetUrl), map);
         } else {
             wb.loadUrl(mOriginTargetUrl);

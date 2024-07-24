@@ -8,6 +8,8 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView;
+
 public class LinearRecyclerView extends RecyclerView {
 
     public LinearRecyclerView(@NonNull Context context) {
